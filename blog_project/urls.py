@@ -22,5 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
     re_path(r'$^', redirect_view),
-    path('todo/', include('todolist.urls'))
+    path('todo/', include('todolist.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/', include('accounts.urls')),
 ]
